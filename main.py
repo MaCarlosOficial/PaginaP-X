@@ -128,7 +128,7 @@ app.add_middleware(
 # Rota inicial GET
 @app.get("/")
 def read_root():
-    return FileResponse(os.path.join("", "index.html"))
+    return FileResponse(os.path.join("API LOGIN Funcionando", "/"))
 
 # --------- Auth: obter token (login) ----------
 @app.post("/token", response_model=Token, summary="Login e obtenção de token JWT")
@@ -296,3 +296,4 @@ async def previsao_tempo():
         pais=location.pais,
         previsao=previsao
     )
+
